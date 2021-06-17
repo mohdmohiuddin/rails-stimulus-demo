@@ -1,0 +1,35 @@
+<div class="container m-5">
+  <%= content_tag :div, nil, data: {controller: "hello"} do %>
+  <div class="flex flex-col justify-center items-center">
+  <form class="w-full max-w-lg ">
+    <div class="flex flex-wrap -mx-3 mb-">
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-state">
+          Qauntity
+        </label>
+        <div class="relative">
+          <select class="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded focus:outline-none focus:bg-white focus:border-gray-500" id="sel1" data-action="change->hello#updateCart">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+          Unit Price
+        </label>
+        <input class="appearance-none block w-full text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="price" type="text" value="100" readonly="readonly">
+      </div>
+    </div>
+     <div class="text-xl font-medium text-black text-right">Total Price: <span data-target="hello.total" id="total-price">100</span></div>
+     <button type="button" data-action="click->hello#addTransaction" class="btn btn-primary mt-3">Add</button>
+     <div class="text-xl font-medium text-black" space-y-2>Transactions</div>
+    <div class="container mx-auto border-2 p-4" data-target="hello.transactions">
+    </div>
+
+  </div>
+  <% end %>
+
+</div>

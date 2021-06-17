@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rails_stimulus_demo_development
+  host: localhost
+  pool: 5
+  username: postgres
+  password: myPassword
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: rails_stimulus_demo_development_test
+  host: localhost
+  pool: 5
+  username: postgres
+  password: myPassword
