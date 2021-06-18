@@ -2,7 +2,9 @@ import {  Controller } from "stimulus"
 
 export default class extends Controller {
   static targets = ["heading", "total", "transactions"]
+  static values = {price: String}
   connect() {
+    console.log(this.priceValue)
   }
 
   calculatePrice() {
